@@ -8,5 +8,8 @@ namespace DTO
 {
     public class DichVu
     {
+        public string MaDichVu { get; set; }
+        public string TenDichVu { get; set; }
+        public double DonGia { get; set; }
     }
 }
