@@ -12,7 +12,6 @@ namespace DAL
 {
     public class ChiTietHoaDonDAL
     {
-        public string MaHoaDon { get; set; }
-        public string MaHopDong { get; set; }
+
     }
 }
