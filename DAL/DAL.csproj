@@ -41,6 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DichVuDAL.cs" />
+    <Compile Include="HoaDonDAL.cs" />
+    <Compile Include="HopDongDAL.cs" />
+    <Compile Include="KhachHangDAL.cs" />
+    <Compile Include="PhongTroDAL.cs" />
+    <Compile Include="TaiKhoanDAL.cs" />
+    <Compile Include="ChiTietHoaDonDAL.cs" />
     <Compile Include="DatabaseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
