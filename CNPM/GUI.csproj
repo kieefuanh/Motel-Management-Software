@@ -161,5 +161,15 @@
   <ItemGroup>
     <None Include="Resources\6f1e3c413d915bacc2dc3243bf5dfbf31.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BAL\BAL.csproj">
+      <Project>{26957f06-df6b-4361-ae44-0c1b747dc0a8}</Project>
+      <Name>BAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{bbb6db70-9eda-4aa1-be6e-5bfbdbba3f92}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -21,5 +21,10 @@ namespace CNPM
         {
 
         }
+
+        private void BtnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
