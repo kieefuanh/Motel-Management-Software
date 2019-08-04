@@ -67,5 +67,17 @@ namespace CNPM
         {
             CallToChildForm(new frmHoaDon());
         }
+
+        private void BtnDangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Bạn muốn đăng xuất ?", "Hỏi thoát",MessageBoxButtons.YesNo);
+            if (r == DialogResult.Yes )
+            {
+                this.Hide();
+                frmDangNhap fm = new frmDangNhap();
+                fm.ShowDialog();
+                this.Close();
+            }
+        }
     }
 }

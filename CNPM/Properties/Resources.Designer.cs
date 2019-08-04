@@ -63,6 +63,26 @@ namespace CNPM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _6f1e3c413d915bacc2dc3243bf5dfbf3 {
+            get {
+                object obj = ResourceManager.GetObject("6f1e3c413d915bacc2dc3243bf5dfbf3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6f1e3c413d915bacc2dc3243bf5dfbf31 {
+            get {
+                object obj = ResourceManager.GetObject("6f1e3c413d915bacc2dc3243bf5dfbf31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar_alt_stroke_256 {
             get {
                 object obj = ResourceManager.GetObject("calendar_alt_stroke-256", resourceCulture);

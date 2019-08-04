@@ -148,6 +148,7 @@
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(169, 68);
             this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.Click += new System.EventHandler(this.BtnDangXuat_Click);
             // 
             // btnQuayLai
             // 
@@ -216,7 +217,7 @@
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmTrangChu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmTrangChu";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
