@@ -41,15 +41,15 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtTimMaPhong = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cboDichVu = new System.Windows.Forms.ComboBox();
             this.cboMaPhong = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.dgvHoaDon = new System.Windows.Forms.DataGridView();
-            this.txtTimMaPhong = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtThang = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dgvHoaDon = new System.Windows.Forms.DataGridView();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -210,6 +210,13 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Hóa đơn theo mã phòng";
             // 
+            // txtTimMaPhong
+            // 
+            this.txtTimMaPhong.Location = new System.Drawing.Point(23, 123);
+            this.txtTimMaPhong.Name = "txtTimMaPhong";
+            this.txtTimMaPhong.Size = new System.Drawing.Size(194, 30);
+            this.txtTimMaPhong.TabIndex = 2;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -251,23 +258,12 @@
             this.txtSoLuong.Size = new System.Drawing.Size(210, 30);
             this.txtSoLuong.TabIndex = 3;
             // 
-            // dgvHoaDon
+            // txtThang
             // 
-            this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHoaDon.Location = new System.Drawing.Point(13, 291);
-            this.dgvHoaDon.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvHoaDon.Name = "dgvHoaDon";
-            this.dgvHoaDon.RowHeadersWidth = 62;
-            this.dgvHoaDon.RowTemplate.Height = 28;
-            this.dgvHoaDon.Size = new System.Drawing.Size(783, 213);
-            this.dgvHoaDon.TabIndex = 2;
-            // 
-            // txtTimMaPhong
-            // 
-            this.txtTimMaPhong.Location = new System.Drawing.Point(23, 123);
-            this.txtTimMaPhong.Name = "txtTimMaPhong";
-            this.txtTimMaPhong.Size = new System.Drawing.Size(194, 30);
-            this.txtTimMaPhong.TabIndex = 2;
+            this.txtThang.Location = new System.Drawing.Point(441, 33);
+            this.txtThang.Name = "txtThang";
+            this.txtThang.Size = new System.Drawing.Size(165, 30);
+            this.txtThang.TabIndex = 3;
             // 
             // label4
             // 
@@ -278,12 +274,16 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Mã phòng";
             // 
-            // txtThang
+            // dgvHoaDon
             // 
-            this.txtThang.Location = new System.Drawing.Point(441, 33);
-            this.txtThang.Name = "txtThang";
-            this.txtThang.Size = new System.Drawing.Size(165, 30);
-            this.txtThang.TabIndex = 3;
+            this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHoaDon.Location = new System.Drawing.Point(13, 291);
+            this.dgvHoaDon.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvHoaDon.Name = "dgvHoaDon";
+            this.dgvHoaDon.RowHeadersWidth = 62;
+            this.dgvHoaDon.RowTemplate.Height = 28;
+            this.dgvHoaDon.Size = new System.Drawing.Size(783, 206);
+            this.dgvHoaDon.TabIndex = 2;
             // 
             // frmHoaDon
             // 

@@ -34,7 +34,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dgvNguoiThue = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,11 +47,14 @@
             this.txtDienThoai = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiThue)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -71,12 +73,12 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(374, 152);
+            this.label8.Location = new System.Drawing.Point(558, 152);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(199, 25);
+            this.label8.Size = new System.Drawing.Size(48, 25);
             this.label8.TabIndex = 6;
-            this.label8.Text = "Thời gian kết thúc HĐ";
+            this.label8.Text = "Đến";
             // 
             // txtTimNguoiThue
             // 
@@ -89,7 +91,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 151);
+            this.label4.Location = new System.Drawing.Point(9, 152);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 25);
@@ -110,27 +112,17 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(374, 76);
+            this.label7.Location = new System.Drawing.Point(434, 112);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(143, 25);
             this.label7.TabIndex = 6;
             this.label7.Text = "Mã phòng thuê";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(374, 114);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(206, 25);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Thời gian bắt đầu thuê";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(374, 40);
+            this.label2.Location = new System.Drawing.Point(434, 76);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 25);
@@ -139,10 +131,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txtBatDau);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
@@ -150,7 +145,6 @@
             this.groupBox1.Controls.Add(this.txtNgaySinh);
             this.groupBox1.Controls.Add(this.txtCMND);
             this.groupBox1.Controls.Add(this.txtKetThuc);
-            this.groupBox1.Controls.Add(this.txtBatDau);
             this.groupBox1.Controls.Add(this.txtMaPhong);
             this.groupBox1.Controls.Add(this.txtDienThoai);
             this.groupBox1.Controls.Add(this.txtHoTen);
@@ -169,7 +163,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 75);
+            this.label5.Location = new System.Drawing.Point(13, 76);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 25);
@@ -179,7 +173,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 111);
+            this.label3.Location = new System.Drawing.Point(36, 112);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 25);
@@ -188,7 +182,7 @@
             // 
             // txtHoKhau
             // 
-            this.txtHoKhau.Location = new System.Drawing.Point(95, 72);
+            this.txtHoKhau.Location = new System.Drawing.Point(87, 73);
             this.txtHoKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoKhau.Name = "txtHoKhau";
             this.txtHoKhau.Size = new System.Drawing.Size(236, 30);
@@ -196,7 +190,7 @@
             // 
             // txtNgaySinh
             // 
-            this.txtNgaySinh.Location = new System.Drawing.Point(95, 148);
+            this.txtNgaySinh.Location = new System.Drawing.Point(87, 149);
             this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.txtNgaySinh.Name = "txtNgaySinh";
             this.txtNgaySinh.Size = new System.Drawing.Size(236, 30);
@@ -204,7 +198,7 @@
             // 
             // txtCMND
             // 
-            this.txtCMND.Location = new System.Drawing.Point(95, 110);
+            this.txtCMND.Location = new System.Drawing.Point(87, 111);
             this.txtCMND.Margin = new System.Windows.Forms.Padding(4);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(236, 30);
@@ -212,23 +206,23 @@
             // 
             // txtKetThuc
             // 
-            this.txtKetThuc.Location = new System.Drawing.Point(551, 147);
+            this.txtKetThuc.Location = new System.Drawing.Point(597, 147);
             this.txtKetThuc.Margin = new System.Windows.Forms.Padding(4);
             this.txtKetThuc.Name = "txtKetThuc";
-            this.txtKetThuc.Size = new System.Drawing.Size(217, 30);
+            this.txtKetThuc.Size = new System.Drawing.Size(160, 30);
             this.txtKetThuc.TabIndex = 3;
             // 
             // txtBatDau
             // 
-            this.txtBatDau.Location = new System.Drawing.Point(551, 109);
+            this.txtBatDau.Location = new System.Drawing.Point(426, 147);
             this.txtBatDau.Margin = new System.Windows.Forms.Padding(4);
             this.txtBatDau.Name = "txtBatDau";
-            this.txtBatDau.Size = new System.Drawing.Size(217, 30);
+            this.txtBatDau.Size = new System.Drawing.Size(133, 30);
             this.txtBatDau.TabIndex = 3;
             // 
             // txtMaPhong
             // 
-            this.txtMaPhong.Location = new System.Drawing.Point(551, 71);
+            this.txtMaPhong.Location = new System.Drawing.Point(540, 112);
             this.txtMaPhong.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaPhong.Name = "txtMaPhong";
             this.txtMaPhong.Size = new System.Drawing.Size(217, 30);
@@ -236,7 +230,7 @@
             // 
             // txtDienThoai
             // 
-            this.txtDienThoai.Location = new System.Drawing.Point(551, 32);
+            this.txtDienThoai.Location = new System.Drawing.Point(540, 73);
             this.txtDienThoai.Margin = new System.Windows.Forms.Padding(4);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(217, 30);
@@ -244,7 +238,7 @@
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(95, 37);
+            this.txtHoTen.Location = new System.Drawing.Point(87, 36);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(236, 30);
@@ -266,16 +260,6 @@
             this.groupBox3.Size = new System.Drawing.Size(767, 93);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 40);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Họ và tên";
             // 
             // btnLuu
             // 
@@ -333,6 +317,44 @@
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Họ và tên";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(372, 152);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 25);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Thuê từ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(434, 39);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(82, 25);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Giới tính";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(540, 36);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(217, 33);
+            this.comboBox1.TabIndex = 7;
+            // 
             // frmNguoiThue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -364,7 +386,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvNguoiThue;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
@@ -383,5 +404,8 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

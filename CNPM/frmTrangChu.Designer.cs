@@ -46,6 +46,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnThoat = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNgayThang = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -108,10 +109,10 @@
             this.btnDangXuat,
             this.btnQuayLai,
             this.toolStripSeparator1,
-            this.toolStripButton1,
             this.btnNguoiThue,
             this.btnPhong,
             this.btnDichVu,
+            this.toolStripButton1,
             this.toolStripSeparator2,
             this.btnThoat});
             this.toolStrip.Location = new System.Drawing.Point(0, 33);
@@ -205,11 +206,23 @@
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
+            // lblNgayThang
+            // 
+            this.lblNgayThang.AutoSize = true;
+            this.lblNgayThang.BackColor = System.Drawing.Color.SkyBlue;
+            this.lblNgayThang.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblNgayThang.Location = new System.Drawing.Point(733, 5);
+            this.lblNgayThang.Name = "lblNgayThang";
+            this.lblNgayThang.Size = new System.Drawing.Size(64, 25);
+            this.lblNgayThang.TabIndex = 10;
+            this.lblNgayThang.Text = "label1";
+            // 
             // frmTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 600);
+            this.Controls.Add(this.lblNgayThang);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.menuStrip1);
@@ -246,6 +259,7 @@
         private System.Windows.Forms.ToolStripButton btnThoat;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.Label lblNgayThang;
     }
 }
 

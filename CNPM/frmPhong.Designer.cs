@@ -64,7 +64,7 @@
             this.dgvPhong.Name = "dgvPhong";
             this.dgvPhong.RowHeadersWidth = 62;
             this.dgvPhong.RowTemplate.Height = 28;
-            this.dgvPhong.Size = new System.Drawing.Size(783, 215);
+            this.dgvPhong.Size = new System.Drawing.Size(783, 206);
             this.dgvPhong.TabIndex = 0;
             // 
             // groupBox1
