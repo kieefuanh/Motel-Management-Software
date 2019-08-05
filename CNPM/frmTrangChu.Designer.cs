@@ -36,16 +36,16 @@
             this.trọGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnDangXuat = new System.Windows.Forms.ToolStripButton();
             this.btnQuayLai = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.btnNguoiThue = new System.Windows.Forms.ToolStripButton();
             this.btnPhong = new System.Windows.Forms.ToolStripButton();
             this.btnDichVu = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnThoat = new System.Windows.Forms.ToolStripButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +59,7 @@
             this.trọGiúpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(990, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(809, 33);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -103,7 +103,7 @@
             // 
             this.toolStrip.BackColor = System.Drawing.Color.LightSkyBlue;
             this.toolStrip.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.toolStrip.ImageScalingSize = new System.Drawing.Size(64, 64);
+            this.toolStrip.ImageScalingSize = new System.Drawing.Size(48, 48);
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnDangXuat,
             this.btnQuayLai,
@@ -117,36 +117,16 @@
             this.toolStrip.Location = new System.Drawing.Point(0, 33);
             this.toolStrip.Name = "toolStrip";
             this.toolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
-            this.toolStrip.Size = new System.Drawing.Size(990, 73);
+            this.toolStrip.Size = new System.Drawing.Size(809, 57);
             this.toolStrip.TabIndex = 6;
             this.toolStrip.Text = "ToolStrip";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 73);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 73);
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::CNPM.Properties.Resources.iconfinder_Home_669946;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 106);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(990, 494);
-            this.panel1.TabIndex = 8;
             // 
             // btnDangXuat
             // 
             this.btnDangXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Image")));
             this.btnDangXuat.ImageTransparentColor = System.Drawing.Color.Black;
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(169, 68);
+            this.btnDangXuat.Size = new System.Drawing.Size(153, 52);
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.Click += new System.EventHandler(this.BtnDangXuat_Click);
             // 
@@ -155,15 +135,20 @@
             this.btnQuayLai.Image = ((System.Drawing.Image)(resources.GetObject("btnQuayLai.Image")));
             this.btnQuayLai.ImageTransparentColor = System.Drawing.Color.Black;
             this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(151, 68);
+            this.btnQuayLai.Size = new System.Drawing.Size(135, 52);
             this.btnQuayLai.Text = "Quay lại";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 57);
             // 
             // toolStripButton1
             // 
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(156, 68);
+            this.toolStripButton1.Size = new System.Drawing.Size(140, 52);
             this.toolStripButton1.Text = "Hóa đơn";
             this.toolStripButton1.Click += new System.EventHandler(this.ToolStripButton1_Click);
             // 
@@ -172,7 +157,7 @@
             this.btnNguoiThue.Image = ((System.Drawing.Image)(resources.GetObject("btnNguoiThue.Image")));
             this.btnNguoiThue.ImageTransparentColor = System.Drawing.Color.Black;
             this.btnNguoiThue.Name = "btnNguoiThue";
-            this.btnNguoiThue.Size = new System.Drawing.Size(180, 68);
+            this.btnNguoiThue.Size = new System.Drawing.Size(164, 52);
             this.btnNguoiThue.Text = "Người thuê";
             this.btnNguoiThue.Click += new System.EventHandler(this.BtnNguoiThue_Click);
             // 
@@ -181,7 +166,7 @@
             this.btnPhong.Image = ((System.Drawing.Image)(resources.GetObject("btnPhong.Image")));
             this.btnPhong.ImageTransparentColor = System.Drawing.Color.Black;
             this.btnPhong.Name = "btnPhong";
-            this.btnPhong.Size = new System.Drawing.Size(137, 68);
+            this.btnPhong.Size = new System.Drawing.Size(121, 52);
             this.btnPhong.Text = "Phòng";
             this.btnPhong.Click += new System.EventHandler(this.BtnPhong_Click);
             // 
@@ -191,24 +176,40 @@
             this.btnDichVu.Image = ((System.Drawing.Image)(resources.GetObject("btnDichVu.Image")));
             this.btnDichVu.ImageTransparentColor = System.Drawing.Color.Black;
             this.btnDichVu.Name = "btnDichVu";
-            this.btnDichVu.Size = new System.Drawing.Size(145, 68);
+            this.btnDichVu.Size = new System.Drawing.Size(129, 52);
             this.btnDichVu.Text = "Dịch vụ";
             this.btnDichVu.Click += new System.EventHandler(this.BtnDichVu_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 57);
             // 
             // btnThoat
             // 
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(130, 68);
+            this.btnThoat.Size = new System.Drawing.Size(114, 52);
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.BtnThoat_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::CNPM.Properties.Resources.iconfinder_Home_669946;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 90);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(809, 510);
+            this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // frmTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 600);
+            this.ClientSize = new System.Drawing.Size(809, 600);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.menuStrip1);
@@ -217,7 +218,7 @@
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmTrangChu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTrangChu";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

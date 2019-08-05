@@ -61,7 +61,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(576, 27);
+            this.label9.Location = new System.Drawing.Point(541, 27);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(211, 25);
@@ -71,7 +71,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(448, 148);
+            this.label8.Location = new System.Drawing.Point(374, 152);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(199, 25);
@@ -80,10 +80,10 @@
             // 
             // txtTimNguoiThue
             // 
-            this.txtTimNguoiThue.Location = new System.Drawing.Point(640, 56);
+            this.txtTimNguoiThue.Location = new System.Drawing.Point(498, 47);
             this.txtTimNguoiThue.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimNguoiThue.Name = "txtTimNguoiThue";
-            this.txtTimNguoiThue.Size = new System.Drawing.Size(300, 30);
+            this.txtTimNguoiThue.Size = new System.Drawing.Size(261, 30);
             this.txtTimNguoiThue.TabIndex = 4;
             // 
             // label4
@@ -99,18 +99,18 @@
             // dgvNguoiThue
             // 
             this.dgvNguoiThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNguoiThue.Location = new System.Drawing.Point(14, 296);
+            this.dgvNguoiThue.Location = new System.Drawing.Point(14, 297);
             this.dgvNguoiThue.Margin = new System.Windows.Forms.Padding(5);
             this.dgvNguoiThue.Name = "dgvNguoiThue";
             this.dgvNguoiThue.RowHeadersWidth = 62;
             this.dgvNguoiThue.RowTemplate.Height = 28;
-            this.dgvNguoiThue.Size = new System.Drawing.Size(962, 184);
+            this.dgvNguoiThue.Size = new System.Drawing.Size(781, 199);
             this.dgvNguoiThue.TabIndex = 4;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(504, 72);
+            this.label7.Location = new System.Drawing.Point(374, 76);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(143, 25);
@@ -120,7 +120,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(441, 110);
+            this.label6.Location = new System.Drawing.Point(374, 114);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(206, 25);
@@ -130,7 +130,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(521, 36);
+            this.label2.Location = new System.Drawing.Point(374, 40);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 25);
@@ -160,10 +160,11 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox1.Size = new System.Drawing.Size(958, 276);
+            this.groupBox1.Size = new System.Drawing.Size(777, 271);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin người thuê";
+            this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // label5
             // 
@@ -187,82 +188,82 @@
             // 
             // txtHoKhau
             // 
-            this.txtHoKhau.Location = new System.Drawing.Point(129, 70);
+            this.txtHoKhau.Location = new System.Drawing.Point(95, 72);
             this.txtHoKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoKhau.Name = "txtHoKhau";
-            this.txtHoKhau.Size = new System.Drawing.Size(297, 30);
+            this.txtHoKhau.Size = new System.Drawing.Size(236, 30);
             this.txtHoKhau.TabIndex = 3;
             // 
             // txtNgaySinh
             // 
-            this.txtNgaySinh.Location = new System.Drawing.Point(129, 146);
+            this.txtNgaySinh.Location = new System.Drawing.Point(95, 148);
             this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(297, 30);
+            this.txtNgaySinh.Size = new System.Drawing.Size(236, 30);
             this.txtNgaySinh.TabIndex = 3;
             // 
             // txtCMND
             // 
-            this.txtCMND.Location = new System.Drawing.Point(129, 108);
+            this.txtCMND.Location = new System.Drawing.Point(95, 110);
             this.txtCMND.Margin = new System.Windows.Forms.Padding(4);
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(297, 30);
+            this.txtCMND.Size = new System.Drawing.Size(236, 30);
             this.txtCMND.TabIndex = 3;
             // 
             // txtKetThuc
             // 
-            this.txtKetThuc.Location = new System.Drawing.Point(662, 148);
+            this.txtKetThuc.Location = new System.Drawing.Point(551, 147);
             this.txtKetThuc.Margin = new System.Windows.Forms.Padding(4);
             this.txtKetThuc.Name = "txtKetThuc";
-            this.txtKetThuc.Size = new System.Drawing.Size(287, 30);
+            this.txtKetThuc.Size = new System.Drawing.Size(217, 30);
             this.txtKetThuc.TabIndex = 3;
             // 
             // txtBatDau
             // 
-            this.txtBatDau.Location = new System.Drawing.Point(662, 110);
+            this.txtBatDau.Location = new System.Drawing.Point(551, 109);
             this.txtBatDau.Margin = new System.Windows.Forms.Padding(4);
             this.txtBatDau.Name = "txtBatDau";
-            this.txtBatDau.Size = new System.Drawing.Size(287, 30);
+            this.txtBatDau.Size = new System.Drawing.Size(217, 30);
             this.txtBatDau.TabIndex = 3;
             // 
             // txtMaPhong
             // 
-            this.txtMaPhong.Location = new System.Drawing.Point(662, 72);
+            this.txtMaPhong.Location = new System.Drawing.Point(551, 71);
             this.txtMaPhong.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaPhong.Name = "txtMaPhong";
-            this.txtMaPhong.Size = new System.Drawing.Size(287, 30);
+            this.txtMaPhong.Size = new System.Drawing.Size(217, 30);
             this.txtMaPhong.TabIndex = 3;
             // 
             // txtDienThoai
             // 
-            this.txtDienThoai.Location = new System.Drawing.Point(662, 33);
+            this.txtDienThoai.Location = new System.Drawing.Point(551, 32);
             this.txtDienThoai.Margin = new System.Windows.Forms.Padding(4);
             this.txtDienThoai.Name = "txtDienThoai";
-            this.txtDienThoai.Size = new System.Drawing.Size(287, 30);
+            this.txtDienThoai.Size = new System.Drawing.Size(217, 30);
             this.txtDienThoai.TabIndex = 3;
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(129, 35);
+            this.txtHoTen.Location = new System.Drawing.Point(95, 37);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(297, 30);
+            this.txtHoTen.Size = new System.Drawing.Size(236, 30);
             this.txtHoTen.TabIndex = 3;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.txtTimNguoiThue);
-            this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.btnLuu);
             this.groupBox3.Controls.Add(this.btnXoa);
             this.groupBox3.Controls.Add(this.btnSua);
             this.groupBox3.Controls.Add(this.btnThem);
+            this.groupBox3.Controls.Add(this.txtTimNguoiThue);
+            this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox3.Location = new System.Drawing.Point(5, 178);
+            this.groupBox3.Location = new System.Drawing.Point(5, 173);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(948, 93);
+            this.groupBox3.Size = new System.Drawing.Size(767, 93);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
@@ -282,11 +283,10 @@
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Image = global::CNPM.Properties.Resources.iconfinder_download_118679;
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(271, 27);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuu.Location = new System.Drawing.Point(218, 27);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(116, 55);
-            this.btnLuu.TabIndex = 0;
+            this.btnLuu.Size = new System.Drawing.Size(100, 50);
+            this.btnLuu.TabIndex = 5;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = false;
@@ -297,11 +297,10 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Image = global::CNPM.Properties.Resources.minus_alt_256;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(430, 27);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Location = new System.Drawing.Point(345, 27);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(116, 55);
-            this.btnXoa.TabIndex = 0;
+            this.btnXoa.Size = new System.Drawing.Size(100, 50);
+            this.btnXoa.TabIndex = 6;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -312,11 +311,10 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Image = global::CNPM.Properties.Resources.iconfinder_pen_alt2_118626;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(147, 27);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Location = new System.Drawing.Point(112, 27);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(116, 55);
-            this.btnSua.TabIndex = 0;
+            this.btnSua.Size = new System.Drawing.Size(100, 50);
+            this.btnSua.TabIndex = 7;
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.UseVisualStyleBackColor = false;
@@ -327,11 +325,10 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Image = global::CNPM.Properties.Resources.iconfinder_new_window_118630__1_;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(23, 27);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Location = new System.Drawing.Point(6, 27);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(116, 55);
-            this.btnThem.TabIndex = 0;
+            this.btnThem.Size = new System.Drawing.Size(100, 50);
+            this.btnThem.TabIndex = 8;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = false;
@@ -341,12 +338,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.ClientSize = new System.Drawing.Size(990, 494);
+            this.ClientSize = new System.Drawing.Size(809, 510);
             this.Controls.Add(this.dgvNguoiThue);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNguoiThue";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNguoiThue";
@@ -362,10 +359,6 @@
         #endregion
 
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTimNguoiThue;
         private System.Windows.Forms.Label label4;
@@ -386,5 +379,9 @@
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnThem;
     }
 }
