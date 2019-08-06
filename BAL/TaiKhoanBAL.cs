@@ -9,5 +9,9 @@ namespace BAL
 {
     public class TaiKhoanBAL
     {
+        public bool KiemTraTaiKhoan(TaiKhoan taikhoan)
+        {
+            return new TaiKhoanDAL().KiemTraTaiKhoan(taikhoan);
+        }
     }
 }

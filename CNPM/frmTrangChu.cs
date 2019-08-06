@@ -63,7 +63,7 @@ namespace CNPM
             CallToChildForm(new frmDichVu());
         }
 
-        private void ToolStripButton1_Click(object sender, EventArgs e)
+        private void BtnHoaDon_Click(object sender, EventArgs e)
         {
             CallToChildForm(new frmHoaDon());
         }
@@ -79,10 +79,9 @@ namespace CNPM
                 this.Close();
             }
         }
-
-        private void Panel1_Paint(object sender, PaintEventArgs e)
+        private void FrmTrangChu_Load(object sender, EventArgs e)
         {
-
+            lblNgayThang.Text = DateTime.Now.ToString(); 
         }
     }
 }
