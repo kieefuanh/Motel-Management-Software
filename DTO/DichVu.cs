@@ -10,6 +10,7 @@ namespace DTO
     {
         public string MaDichVu { get; set; }
         public string TenDichVu { get; set; }
-        public double DonGia { get; set; }
+        public double Gia { get; set; }
+        public string DonGia { get; set; }
     }
 }

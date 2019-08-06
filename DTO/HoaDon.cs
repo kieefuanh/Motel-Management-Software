@@ -8,5 +8,7 @@ namespace DTO
 {
     public class HoaDon
     {
+        public string MaHoaDon { get; set; }
+        public string MaHopDong { get; set; }
     }
 }
