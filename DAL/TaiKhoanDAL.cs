@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DTO;
 using System.Data;
 using System.Data.SqlClient;
 using DTO;
@@ -27,6 +26,26 @@ namespace DAL
                 return true;
             }
             return false;
+        }
+        public bool KiemTraMatKhau(string mk)
+        {
+            SqlParameter parPwd = new SqlParameter("@pwd", System.Data.SqlDbType.VarChar);
+            parPwd.Value = mk;
+
+            SqlDataReader reader = ReadDataPars("select * from TaiKhoan where Password = @pwd", new[] {parPwd });
+            if (reader.Read())
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool SuaMatKhau(string mk)
+        {
+            string sql = "update TaiKhoan set Password = @mk";
+            SqlParameter parMK = new SqlParameter("@mk", System.Data.SqlDbType.VarChar);
+            parMK.Value = mk;
+            bool kq = WriteData(sql, new[] { parMK});
+            return kq;
         }
     }
 }

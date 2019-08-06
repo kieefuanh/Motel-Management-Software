@@ -13,5 +13,13 @@ namespace BAL
         {
             return new TaiKhoanDAL().KiemTraTaiKhoan(taikhoan);
         }
+        public bool KiemTraMatKhau(string mk)
+        {
+            return new TaiKhoanDAL().KiemTraMatKhau(mk);
+        }
+        public bool SuaMatKhau(string mk)
+        {
+            return new TaiKhoanDAL().SuaMatKhau(mk);
+        }
     }
 }

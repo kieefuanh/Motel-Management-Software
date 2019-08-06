@@ -83,5 +83,16 @@ namespace CNPM
         {
             lblNgayThang.Text = DateTime.Now.ToString(); 
         }
+
+        private void ĐổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDoiMatKhau fm = new frmDoiMatKhau();
+            fm.ShowDialog(); 
+        }
+
+        private void ĐăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnDangXuat.PerformClick();
+        }
     }
 }
