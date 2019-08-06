@@ -39,10 +39,10 @@
             this.btnDangXuat = new System.Windows.Forms.ToolStripButton();
             this.btnQuayLai = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.btnNguoiThue = new System.Windows.Forms.ToolStripButton();
             this.btnPhong = new System.Windows.Forms.ToolStripButton();
             this.btnDichVu = new System.Windows.Forms.ToolStripButton();
+            this.btnHoaDon = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnThoat = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -112,7 +112,7 @@
             this.btnNguoiThue,
             this.btnPhong,
             this.btnDichVu,
-            this.toolStripButton1,
+            this.btnHoaDon,
             this.toolStripSeparator2,
             this.btnThoat});
             this.toolStrip.Location = new System.Drawing.Point(0, 33);
@@ -144,15 +144,6 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 57);
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(140, 52);
-            this.toolStripButton1.Text = "Hóa đơn";
-            this.toolStripButton1.Click += new System.EventHandler(this.ToolStripButton1_Click);
-            // 
             // btnNguoiThue
             // 
             this.btnNguoiThue.Image = ((System.Drawing.Image)(resources.GetObject("btnNguoiThue.Image")));
@@ -181,6 +172,15 @@
             this.btnDichVu.Text = "Dịch vụ";
             this.btnDichVu.Click += new System.EventHandler(this.BtnDichVu_Click);
             // 
+            // btnHoaDon
+            // 
+            this.btnHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnHoaDon.Image")));
+            this.btnHoaDon.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.Size = new System.Drawing.Size(140, 52);
+            this.btnHoaDon.Text = "Hóa đơn";
+            this.btnHoaDon.Click += new System.EventHandler(this.BtnHoaDon_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
@@ -204,14 +204,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(809, 510);
             this.panel1.TabIndex = 8;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // lblNgayThang
             // 
             this.lblNgayThang.AutoSize = true;
             this.lblNgayThang.BackColor = System.Drawing.Color.SkyBlue;
             this.lblNgayThang.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblNgayThang.Location = new System.Drawing.Point(733, 5);
+            this.lblNgayThang.Location = new System.Drawing.Point(636, 5);
             this.lblNgayThang.Name = "lblNgayThang";
             this.lblNgayThang.Size = new System.Drawing.Size(64, 25);
             this.lblNgayThang.TabIndex = 10;
@@ -233,6 +232,7 @@
             this.Name = "frmTrangChu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTrangChu";
+            this.Load += new System.EventHandler(this.FrmTrangChu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip.ResumeLayout(false);
@@ -258,7 +258,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton btnThoat;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btnHoaDon;
         private System.Windows.Forms.Label lblNgayThang;
     }
 }

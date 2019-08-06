@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BAL;
+using DTO;
+using System;
 using System.Windows.Forms;
 
 namespace CNPM
@@ -20,6 +15,20 @@ namespace CNPM
         private void BtnDangNhap_Click(object sender, EventArgs e)
         {
 
+            TaiKhoanBAL bal = new TaiKhoanBAL();
+            TaiKhoan acc = new TaiKhoan();
+            acc.Username = txtUsername.Text;
+            acc.Password = txtPassword.Text;
+
+
+            if (bal.KiemTraTaiKhoan(acc))
+            {
+                frmTrangChu f = new frmTrangChu();
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
+            }
+            else MessageBox.Show("Sai thông tin đăng nhập");
         }
 
         private void BtnThoat_Click(object sender, EventArgs e)
