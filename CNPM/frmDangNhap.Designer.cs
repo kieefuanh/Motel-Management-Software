@@ -36,6 +36,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDangNhap = new System.Windows.Forms.Button();
+            this.ckbLuuThongTin = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +95,7 @@
             this.txtPassword.Location = new System.Drawing.Point(516, 344);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(399, 41);
             this.txtPassword.TabIndex = 3;
             // 
@@ -117,6 +119,18 @@
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.BtnDangNhap_Click);
             // 
+            // ckbLuuThongTin
+            // 
+            this.ckbLuuThongTin.AutoSize = true;
+            this.ckbLuuThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbLuuThongTin.Location = new System.Drawing.Point(600, 393);
+            this.ckbLuuThongTin.Name = "ckbLuuThongTin";
+            this.ckbLuuThongTin.Size = new System.Drawing.Size(248, 29);
+            this.ckbLuuThongTin.TabIndex = 5;
+            this.ckbLuuThongTin.Text = "Lưu thông tin đăng nhập";
+            this.ckbLuuThongTin.UseVisualStyleBackColor = true;
+            this.ckbLuuThongTin.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
+            // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
@@ -124,6 +138,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(990, 600);
+            this.Controls.Add(this.ckbLuuThongTin);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.txtPassword);
@@ -154,5 +169,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnDangNhap;
+        private System.Windows.Forms.CheckBox ckbLuuThongTin;
     }
 }
