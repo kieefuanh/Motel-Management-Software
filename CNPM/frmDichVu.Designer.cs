@@ -167,7 +167,11 @@
             this.txtTimDichVu.Location = new System.Drawing.Point(523, 37);
             this.txtTimDichVu.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimDichVu.Name = "txtTimDichVu";
+//<<<<<<< HEAD
             this.txtTimDichVu.Size = new System.Drawing.Size(131, 30);
+//=======
+            this.txtTimDichVu.Size = new System.Drawing.Size(218, 30);
+//>>>>>>> parent of 6819ac6... .
             this.txtTimDichVu.TabIndex = 8;
             // 
             // label6
