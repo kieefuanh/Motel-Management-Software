@@ -87,7 +87,7 @@ namespace DAL
             if(KTTrung(cmnd) == true)
             {
                 string sql = "update KhachHang set TenKH = @ten, NamSinh = @namsinh, SDT = @sdt," +
-                    " HoKhau = @sdt, GioiTinh=@gioitinh where CMND = @cmnd";
+                    " HoKhau = @hokhau, GioiTinh=@gioitinh where CMND = @cmnd";
 
                 SqlParameter parTen = new SqlParameter("@ten", SqlDbType.NVarChar);
                 string ten = ToiUuChuoi(k.TenKH);
@@ -169,14 +169,14 @@ namespace DAL
             reader.Close();
             return k;
         }
-        //tải thông tin khách tìm đc lên grid view
-        public List<KhachHang> Tai1KH(string cm)
+        //tải thông tin khách tìm đc lên grid view theo cm
+        public List<KhachHang> Tai1KHTheoCM(string cm)
         {
             OpenConnection();
             List<KhachHang> dskh = new List<KhachHang>();
 
             string sql = "select * from KhachHang where CMND =@cm";
-            SqlParameter parCM = new SqlParameter("@ma",SqlDbType.VarChar);
+            SqlParameter parCM = new SqlParameter("@cm",SqlDbType.VarChar);
             parCM.Value = cm;
             SqlDataReader reader = ReadDataPars(sql,new[] { parCM});
             if (reader.Read())
@@ -205,8 +205,9 @@ namespace DAL
             string sql = "select * from KhachHang where TenKH=@ten";
             KhachHang k = new KhachHang();
             OpenConnection();
-            SqlParameter parTen = new SqlParameter("@ten", SqlDbType.VarChar);
-            ten = ToiUuChuoi(ten);
+            ten = ToiUuChuoi(ten); //Làm Cho tất chuỗi đưa vào đc viết hoa đầu và bớt khoảng trắng thừa
+            SqlParameter parTen = new SqlParameter("@ten", SqlDbType.NVarChar);
+            
             parTen.Value = ten; ;
             SqlDataReader reader = ReadDataPars(sql, new[] { parTen });
             if (reader.Read())
@@ -227,5 +228,36 @@ namespace DAL
             reader.Close();
             return k;
         }
+            //Tải 1 Kh dựa theo tên
+            public List<KhachHang> Tai1KHTheoTen(string ten)
+            {
+                OpenConnection();
+                List<KhachHang> dskh = new List<KhachHang>();
+                ten = ToiUuChuoi(ten);
+                string sql = "select * from KhachHang where TenKH =@ten";
+                SqlParameter parCM = new SqlParameter("@ten", SqlDbType.NVarChar);
+                parCM.Value = ten;
+                SqlDataReader reader = ReadDataPars(sql, new[] { parCM });
+                if (reader.Read())
+                {
+                    KhachHang k = new KhachHang();
+                    k.TenKH = reader.GetString(0);
+                    k.CMND = reader.GetString(2);
+                    k.HoKhau = reader.GetString(3);
+                    k.SDT = reader.GetString(4);
+                    k.NamSinh = reader.GetInt32(1);
+                    if (reader.GetInt32(5) == 1)
+                    {
+                        k.GioiTinh = "Nam";
+                    }
+                    else
+                        k.GioiTinh = "Nữ";
+
+                    dskh.Add(k);
+                }
+                reader.Close();
+                return dskh;
+            }
+        
     }
 }

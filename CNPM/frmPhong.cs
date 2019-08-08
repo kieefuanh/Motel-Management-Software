@@ -58,9 +58,6 @@ namespace CNPM
             }
         }
 
-        private void DgvPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
     }
 }
