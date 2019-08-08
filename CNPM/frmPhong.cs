@@ -39,6 +39,7 @@ namespace CNPM
             TaiDSPhongTro();
             txtNguoiThue.Enabled = false;
             txtCMND.Enabled = false;
+            btnLuu.Enabled = false;
         }
 
         private void DgvPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
