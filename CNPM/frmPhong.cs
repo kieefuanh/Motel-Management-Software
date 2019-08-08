@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using BAL;
 
 namespace CNPM
 {
@@ -20,6 +22,21 @@ namespace CNPM
         private void TxtGiaPhong_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+            
+        }
+        private void TaiDSPhongTro()
+        {
+            PhongTroBAL bal = new PhongTroBAL();
+            dgvPhong.DataSource = bal.TaiDSPhongTro();
+        }
+
+        private void FrmPhong_Load(object sender, EventArgs e)
+        {
+            TaiDSPhongTro();
         }
     }
 }
