@@ -49,9 +49,9 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnThoat = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblNgayThang = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -230,33 +230,13 @@
             // 
             this.panel1.BackgroundImage = global::CNPM.Properties.Resources.iconfinder_Home_669946;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 90);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(809, 510);
             this.panel1.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label2.Location = new System.Drawing.Point(380, 420);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ver 1.0";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label1.Location = new System.Drawing.Point(338, 395);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Quản lý phòng trọ";
             // 
             // lblNgayThang
             // 
@@ -268,6 +248,26 @@
             this.lblNgayThang.Size = new System.Drawing.Size(64, 25);
             this.lblNgayThang.TabIndex = 10;
             this.lblNgayThang.Text = "label1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label1.Location = new System.Drawing.Point(322, 391);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Quản lý phòng trọ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label2.Location = new System.Drawing.Point(341, 416);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "ver 0.1.Beta";
             // 
             // frmTrangChu
             // 
@@ -318,8 +318,8 @@
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem côngCụToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tạoMãNgẫuNhiênToolStripMenuItem;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

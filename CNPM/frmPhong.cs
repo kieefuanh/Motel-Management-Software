@@ -38,5 +38,10 @@ namespace CNPM
         {
             TaiDSPhongTro();
         }
+
+        private void DgvPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
