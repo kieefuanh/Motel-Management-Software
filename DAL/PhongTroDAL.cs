@@ -27,7 +27,7 @@ namespace DAL
             return kq;
 
         }
-
+        //lấy thông tin tất cả phòng để đưa và datagrid view
         public List<PhongTro> TaiDSPhongTro()
         {
             List<PhongTro> dspt = new List<PhongTro>();
@@ -41,9 +41,31 @@ namespace DAL
                 pt.TinhTrang = reader.GetString(1);
                 pt.GiaPhong = reader.GetDouble(2);
                 pt.DiaChi = reader.GetString(3);
+
+                dspt.Add(pt);
             }
             reader.Close();
             return dspt;
+        }
+
+        //Lấy Thông Tin 1 phòng
+        public PhongTro ThongTin1Phong(string ma)
+        {
+            PhongTro pt = new PhongTro();
+            OpenConnection();
+            string sql = "select * from PhongTro where MaPhong = @ma";
+            SqlParameter parMa = new SqlParameter("@ma",SqlDbType.VarChar);
+            parMa.Value = ma;
+            SqlDataReader reader = ReadDataPars(sql,new[] { parMa});
+            if(reader.Read())
+            {
+                pt.MaPhong = reader.GetString(0);
+                pt.GiaPhong = reader.GetInt32(2);
+                pt.TinhTrang = reader.GetString(1);
+                pt.DiaChi = reader.GetString(3);
+            }
+            reader.Close();
+            return pt;           
         }
     }
 }
