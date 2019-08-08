@@ -26,6 +26,26 @@ namespace DAL
             reader.Close();
             return dsHD;
         }
+        public HoaDon TimHDTheoMaHoaDon(string MaHoaDon)
+        {
+            SqlDataReader reader = ReadData("select * from HoaDon where MaHD = " + MaHoaDon);
+            string mhdg = reader.GetString(1);
+            HoaDon hd = new HoaDon();
+            hd.MaHoaDon = MaHoaDon;
+            hd.MaHopDong = mhdg;
+            reader.Close();
+            return hd;
+        }
+        public HoaDon TimHDTheoMaHopDong(string MaHopDong)
+        {
+            SqlDataReader reader = ReadData("select * from HoaDon where MaHD = " + MaHopDong);
+            string mahd = reader.GetString(0);
+            HoaDon hd = new HoaDon();
+            hd.MaHoaDon = mahd;
+            hd.MaHopDong = MaHopDong;
+            reader.Close();
+            return hd;
+        }
         public bool XoaHD(string mahd)
         {
             string sql = "delete from HoaDon where MaHoaDon = @mahd";

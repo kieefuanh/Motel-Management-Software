@@ -33,6 +33,37 @@ namespace DAL
             reader.Close();
             return dsCTHD;
         }
+        public ChiTietHoaDon TimCTHD(string MaHD)
+        {
+            SqlDataReader reader = ReadData("select * from ChiTietHoaDon where MaHD = " + MaHD);
+            string mahd = reader.GetString(0);
+            float tpt = float.Parse(reader.GetString(1));
+            int sldv = int.Parse(reader.GetString(2));
+            string madv = reader.GetString(3);
+            int thang = int.Parse(reader.GetString(4));
+            ChiTietHoaDon cthd = new ChiTietHoaDon();
+            cthd.MaHD = mahd;
+            cthd.TienPhaiTra = tpt;
+            cthd.MaDV = madv;
+            cthd.SoLuongDV = sldv;
+            cthd.Thang = thang;
+            return cthd;
+        }
+        public ChiTietHoaDon TimCTHD(int thang)
+        {
+            SqlDataReader reader = ReadData("select * from ChiTietHoaDon where Thang = " + thang);
+            string mahd = reader.GetString(0);
+            float tpt = float.Parse(reader.GetString(1));
+            int sldv = int.Parse(reader.GetString(2));
+            string madv = reader.GetString(3);
+            ChiTietHoaDon cthd = new ChiTietHoaDon();
+            cthd.MaHD = mahd;
+            cthd.TienPhaiTra = tpt;
+            cthd.MaDV = madv;
+            cthd.SoLuongDV = sldv;
+            cthd.Thang = thang;
+            return cthd;
+        }
         public bool XoaCTHD(string MaHD)
         {
             string sql = "delete from ChiTietHoaDon where MaHD = @mahd";
