@@ -63,11 +63,13 @@
             this.dgvPhong.Location = new System.Drawing.Point(13, 291);
             this.dgvPhong.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPhong.Name = "dgvPhong";
+            this.dgvPhong.ReadOnly = true;
             this.dgvPhong.RowHeadersWidth = 62;
             this.dgvPhong.RowTemplate.Height = 28;
             this.dgvPhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPhong.Size = new System.Drawing.Size(783, 206);
             this.dgvPhong.TabIndex = 0;
+            this.dgvPhong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvPhong_CellContentClick);
             // 
             // groupBox1
             // 
@@ -322,8 +324,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvPhong;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
@@ -345,5 +345,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTimMaPhong;
+        private System.Windows.Forms.DataGridView dgvPhong;
     }
 }

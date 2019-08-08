@@ -22,5 +22,12 @@ namespace BAL
             List<PhongTro> dspt = dal.TaiDSPhongTro();
             return dspt;
         }
+
+        public PhongTro LayThongTin1Phong(string ma)
+        {
+            PhongTroDAL dal = new PhongTroDAL();
+            PhongTro pt = dal.ThongTin1Phong(ma);
+            return pt;
+        }
     }
 }
