@@ -27,7 +27,7 @@ namespace BAL
         {
             return new DichVuDAL().TimDVTheoMa(ma);
         }
-        public DichVu TimDVTheoTen(string ten)
+        public List<DichVu> TimDVTheoTen(string ten)
         {
             return new DichVuDAL().TimDVTheoTen(ten);
         }

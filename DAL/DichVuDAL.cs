@@ -13,39 +13,54 @@ namespace DAL
     {
         public List<DichVu> DSDichVu()
         {
+            OpenConnection();
             SqlDataReader reader = ReadData("select * from DichVu");
             List<DichVu> dsDV = new List<DichVu>();
             while (reader.Read())
             {
                 string madv= reader.GetString(0);
                 string tendv = reader.GetString(1);
-                double gia = double.Parse(reader.GetString(2));
+                double gia = reader.GetDouble(2);
                 string dongia = reader.GetString(3);
                 DichVu dv = new DichVu();
                 dv.MaDichVu = madv;
                 dv.TenDichVu = tendv;
                 dv.Gia = gia;
                 dv.DonGia = dongia;
+                dsDV.Add(dv);
             }
             reader.Close();
             return dsDV;
         }
-        public DichVu TimDVTheoTen(string TenDV)
+        public List<DichVu> TimDVTheoTen(string TenDV)
         {
-            SqlDataReader reader = ReadData("select * from DichVu where Thang like %"+TenDV+"%");
-            string madv = reader.GetString(0);
-            double gia = double.Parse(reader.GetString(2));
-            string dongia = reader.GetString(3);
-            DichVu dv = new DichVu();
-            dv.MaDichVu = madv;
-            dv.TenDichVu = TenDV;
-            dv.Gia = gia;
-            dv.DonGia = dongia;
-            return dv;
+            OpenConnection();
+            SqlDataReader reader = ReadData("select * from DichVu where TenDV = N'"+TenDV+"'");
+            //SqlParameter parTen = new SqlParameter("@tendv", SqlDbType.NVarChar);
+            //parTen.Value = TenDV;
+            List<DichVu> dsDV = new List<DichVu>();
+            while (reader.Read())
+            {
+                string madv = reader.GetString(0);
+                string tendv = reader.GetString(1);
+                double gia = reader.GetDouble(2);
+                string dongia = reader.GetString(3);
+                DichVu dv = new DichVu();
+                dv.MaDichVu = madv;
+                dv.TenDichVu = tendv;
+                dv.Gia = gia;
+                dv.DonGia = dongia;
+                dsDV.Add(dv);
+            }
+            reader.Close();
+            return dsDV;
         }
         public DichVu TimDVTheoMa(string MaDV)
         {
-            SqlDataReader reader = ReadData("select * from DichVu where Thang = "+MaDV);
+            OpenConnection();
+            SqlDataReader reader = ReadData("select * from DichVu where MaDV = @madv ");
+            SqlParameter parMadv = new SqlParameter("@madv", SqlDbType.VarChar);
+            parMadv.Value = MaDV;
             string tendv = reader.GetString(1);
             double gia = double.Parse(reader.GetString(2));
             string dongia = reader.GetString(3);
@@ -58,6 +73,7 @@ namespace DAL
         }
         public bool XoaDV(string MaDV)
         {
+            OpenConnection();
             string sql = "delete from DichVu where MaDV = @madv";
             SqlParameter parMadv = new SqlParameter("@madv", SqlDbType.VarChar);
             parMadv.Value = MaDV;
@@ -66,20 +82,21 @@ namespace DAL
         }
         public bool ThemDV(DichVu dv)
         {
-            string sql = "insert into DichVu values(@madv,@tendv,@gia,@dongia)";
-            SqlParameter parMadv = new SqlParameter("@madv", System.Data.SqlDbType.VarChar);
+            string sql = "insert into DichVu values (@madv,@tendv,@gia,@dongia)";
+            SqlParameter parMadv = new SqlParameter("@madv", SqlDbType.VarChar);
             parMadv.Value = dv.MaDichVu;
-            SqlParameter parTendv = new SqlParameter("@tendv", System.Data.SqlDbType.NVarChar);
+            SqlParameter parTendv = new SqlParameter("@tendv", SqlDbType.NVarChar);
             parTendv.Value = dv.TenDichVu;
-            SqlParameter parGia = new SqlParameter("@gia", System.Data.SqlDbType.Float);
+            SqlParameter parGia = new SqlParameter("@gia", SqlDbType.Float);
             parGia.Value = dv.Gia;
-            SqlParameter parDongia = new SqlParameter("@dongia", System.Data.SqlDbType.NVarChar);
+            SqlParameter parDongia = new SqlParameter("@dongia", SqlDbType.NVarChar);
             parDongia.Value = dv.DonGia;
             bool kq = WriteData(sql, new[] { parMadv, parTendv, parGia, parDongia});
             return kq;
         }
         public bool SuaDV(DichVu dv)
         {
+            OpenConnection();
             string sql = "update DichVu set MaDV = @madv, TenDV = @tendv, Gia = @gia, DonGia = @dongia";
             SqlParameter parMadv = new SqlParameter("@madv", System.Data.SqlDbType.VarChar);
             parMadv.Value = dv.MaDichVu;

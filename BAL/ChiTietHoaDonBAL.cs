@@ -23,7 +23,7 @@ namespace BAL
         {
             return new ChiTietHoaDonDAL().XoaCTHD(mahd);
         }
-        public ChiTietHoaDon TimCTHD(string mahd)
+        public List<ChiTietHoaDon> TimCTHD(string mahd)
         {
             return new ChiTietHoaDonDAL().TimCTHD(mahd);
         }
