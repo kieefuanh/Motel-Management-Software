@@ -94,5 +94,12 @@ namespace CNPM
         {
             btnDangXuat.PerformClick();
         }
+
+        private void ThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

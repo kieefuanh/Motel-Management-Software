@@ -45,6 +45,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnTim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -63,7 +64,7 @@
             // dgvDichVu
             // 
             this.dgvDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDichVu.Location = new System.Drawing.Point(14, 293);
+            this.dgvDichVu.Location = new System.Drawing.Point(6, 293);
             this.dgvDichVu.Margin = new System.Windows.Forms.Padding(5);
             this.dgvDichVu.Name = "dgvDichVu";
             this.dgvDichVu.RowHeadersWidth = 62;
@@ -145,6 +146,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnTim);
             this.groupBox3.Controls.Add(this.txtTimDichVu);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.btnLuu);
@@ -162,10 +164,10 @@
             // 
             // txtTimDichVu
             // 
-            this.txtTimDichVu.Location = new System.Drawing.Point(542, 37);
+            this.txtTimDichVu.Location = new System.Drawing.Point(523, 37);
             this.txtTimDichVu.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimDichVu.Name = "txtTimDichVu";
-            this.txtTimDichVu.Size = new System.Drawing.Size(218, 30);
+            this.txtTimDichVu.Size = new System.Drawing.Size(131, 30);
             this.txtTimDichVu.TabIndex = 8;
             // 
             // label6
@@ -237,6 +239,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.BtnThem_Click);
             // 
             // label1
             // 
@@ -247,6 +250,20 @@
             this.label1.Size = new System.Drawing.Size(107, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã dịch vụ";
+            // 
+            // btnTim
+            // 
+            this.btnTim.BackColor = System.Drawing.Color.LightGreen;
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTim.Image = global::CNPM.Properties.Resources.iconfinder_67_111124;
+            this.btnTim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTim.Location = new System.Drawing.Point(661, 23);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(100, 50);
+            this.btnTim.TabIndex = 9;
+            this.btnTim.Text = "Tìm";
+            this.btnTim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTim.UseVisualStyleBackColor = false;
             // 
             // frmDichVu
             // 
@@ -289,5 +306,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTimDichVu;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnTim;
     }
 }

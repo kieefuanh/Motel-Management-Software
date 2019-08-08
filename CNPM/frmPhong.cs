@@ -57,5 +57,10 @@ namespace CNPM
                 rdbDaDuocThue.Checked = true;
             }
         }
+
+        private void DgvPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

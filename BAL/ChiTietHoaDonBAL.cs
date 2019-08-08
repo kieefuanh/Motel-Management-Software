@@ -23,21 +23,18 @@ namespace BAL
         {
             return new ChiTietHoaDonDAL().XoaCTHD(mahd);
         }
-        public ChiTietHoaDon LayCTHD(string mahd)
+        public ChiTietHoaDon TimCTHD(string mahd)
         {
-            ChiTietHoaDonDAL dal = new ChiTietHoaDonDAL();
-            List<ChiTietHoaDon> dsCTHD = dal.DSChiTietHoaDon();
-            foreach (ChiTietHoaDon ct in dsCTHD)
-            {
-                if (ct.MaHD == mahd)
-                    return ct;
-            }
-            return null;
+            return new ChiTietHoaDonDAL().TimCTHD(mahd);
+        }
+        public ChiTietHoaDon TimCTHD(int thang)
+        {
+            return new ChiTietHoaDonDAL().TimCTHD(thang);
         }
         public bool ThemCTHD(ChiTietHoaDon cthd)
         {
             ChiTietHoaDonDAL dal = new ChiTietHoaDonDAL();
-            if (LayCTHD(cthd.MaHD) == null)
+            if (TimCTHD(cthd.MaHD) == null)
                 return dal.ThemCTHD(cthd);
             else
                 return false;

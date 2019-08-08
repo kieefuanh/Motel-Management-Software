@@ -16,5 +16,10 @@ namespace CNPM
         {
             InitializeComponent();
         }
+
+        private void BtnThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

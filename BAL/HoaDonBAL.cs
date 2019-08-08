@@ -22,21 +22,18 @@ namespace BAL
         {
             return new HoaDonDAL().XoaHD(ma);
         }
-        public HoaDon LayHD(string ma)
+        public HoaDon TimHDTheoMaHoaDon(string ma)
         {
-            HoaDonDAL dal = new HoaDonDAL();
-            List<HoaDon> dsHD = dal.DSHoaDon();
-            foreach (HoaDon dv in dsHD)
-            {
-                if (dv.MaHoaDon == ma)
-                    return dv;
-            }
-            return null;
+            return new HoaDonDAL().TimHDTheoMaHoaDon(ma);
+        }
+        public HoaDon TimHDTheoMaHopDong(string ma)
+        {
+            return new HoaDonDAL().TimHDTheoMaHopDong(ma);
         }
         public bool ThemHD(HoaDon hd)
         {
             HoaDonDAL dal = new HoaDonDAL();
-            if (LayHD(hd.MaHoaDon) == null)
+            if (TimHDTheoMaHoaDon(hd.MaHoaDon) == null)
                 return dal.ThemHD(hd);
             else
                 return false;

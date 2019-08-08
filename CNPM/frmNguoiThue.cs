@@ -77,12 +77,6 @@ namespace CNPM
             btnLuu.Enabled = true;
 
         }
-
-        private void Label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnSua_Click(object sender, EventArgs e)
         {
             btnLuu.Enabled = true;

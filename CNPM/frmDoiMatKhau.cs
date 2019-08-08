@@ -36,6 +36,9 @@ namespace CNPM
             if (bal.KiemTraMatKhau(txtMatKhau.Text)) groupBox1.Enabled = true;
         }
 
+        private void FrmDoiMatKhau_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

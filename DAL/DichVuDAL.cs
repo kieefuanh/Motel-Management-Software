@@ -30,6 +30,32 @@ namespace DAL
             reader.Close();
             return dsDV;
         }
+        public DichVu TimDVTheoTen(string TenDV)
+        {
+            SqlDataReader reader = ReadData("select * from DichVu where Thang like %"+TenDV+"%");
+            string madv = reader.GetString(0);
+            double gia = double.Parse(reader.GetString(2));
+            string dongia = reader.GetString(3);
+            DichVu dv = new DichVu();
+            dv.MaDichVu = madv;
+            dv.TenDichVu = TenDV;
+            dv.Gia = gia;
+            dv.DonGia = dongia;
+            return dv;
+        }
+        public DichVu TimDVTheoMa(string MaDV)
+        {
+            SqlDataReader reader = ReadData("select * from DichVu where Thang = "+MaDV);
+            string tendv = reader.GetString(1);
+            double gia = double.Parse(reader.GetString(2));
+            string dongia = reader.GetString(3);
+            DichVu dv = new DichVu();
+            dv.MaDichVu = MaDV;
+            dv.TenDichVu = tendv;
+            dv.Gia = gia;
+            dv.DonGia = dongia;
+            return dv;
+        }
         public bool XoaDV(string MaDV)
         {
             string sql = "delete from DichVu where MaDV = @madv";
