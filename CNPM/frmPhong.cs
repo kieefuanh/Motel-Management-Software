@@ -40,6 +40,8 @@ namespace CNPM
             txtNguoiThue.Enabled = false;
             txtCMND.Enabled = false;
             btnLuu.Enabled = false;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
         }
 
         private void DgvPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -48,7 +50,7 @@ namespace CNPM
             txtGiaPhong.Text = dgvPhong.SelectedRows[0].Cells[2].Value.ToString();
             txtDiaChi.Text = dgvPhong.SelectedRows[0].Cells[3].Value.ToString();
             string tinhtrang = txtGiaPhong.Text = dgvPhong.SelectedRows[0].Cells[1].Value.ToString();
-            if (string.Compare(tinhtrang, "Trống", true) == 0)
+            if (string.Compare(tinhtrang,"Trống",true)==0)
             {
                 rdbTrong.Checked = true;
             }
@@ -56,6 +58,29 @@ namespace CNPM
             {
                 rdbDaDuocThue.Checked = true;
             }
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
+        }
+
+        private void BtnSua_Click(object sender, EventArgs e)
+        {
+            btnXoa.Enabled = true;
+        }
+
+        private void BtnThem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Xóa các text box
+        private void LamMoiTextBox()
+        {
+            txtMaPhong.Text = "";
+            txtDiaChi.Text = "";
+            txtGiaPhong.Text = "";
+            txtNguoiThue.Text = "";
+            txtCMND.Text = "";
+           
         }
     }
 }

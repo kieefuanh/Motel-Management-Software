@@ -309,6 +309,7 @@
             this.btnTim.Text = "Tìm";
             this.btnTim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTim.UseVisualStyleBackColor = false;
+            this.btnTim.Click += new System.EventHandler(this.BtnTim_Click);
             // 
             // btnLuu
             // 
@@ -338,6 +339,7 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.BtnXoa_Click);
             // 
             // btnSua
             // 

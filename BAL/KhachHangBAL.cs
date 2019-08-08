@@ -53,10 +53,10 @@ namespace BAL
             KhachHang k = dal.TimTheoCMND(cm);
             return k;
         }
-        public List<KhachHang> Tai1KH(string cm)
+        public List<KhachHang> Tai1KHTheoCM(string cm)
         {
             KhachHangDAL dal = new KhachHangDAL();
-            List<KhachHang> dskh = dal.TaiKH();
+            List<KhachHang> dskh = dal.Tai1KHTheoCM(cm);
             return dskh;
         }
         public KhachHang TimTheoTen(string ten)
@@ -64,6 +64,18 @@ namespace BAL
             KhachHangDAL dal = new KhachHangDAL();
             KhachHang k = dal.TimTheoTen(ten);
             return k;
+        }
+        public List<KhachHang> Tai1KHTheoTen(string cm)
+        {
+            KhachHangDAL dal = new KhachHangDAL();
+            List<KhachHang> dskh = dal.Tai1KHTheoTen(cm);
+            return dskh;
+        }
+        public bool XoaKh(string cmnd)
+        {
+            KhachHangDAL dal = new KhachHangDAL();
+            bool kq = dal.XoaKH(cmnd);
+            return kq;
         }
     }
 }
