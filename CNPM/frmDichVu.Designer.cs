@@ -45,7 +45,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -146,7 +146,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.btnTim);
             this.groupBox3.Controls.Add(this.txtTimDichVu);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.btnLuu);
@@ -251,19 +251,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã dịch vụ";
             // 
-            // button1
+            // btnTim
             // 
-            this.button1.BackColor = System.Drawing.Color.LightGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::CNPM.Properties.Resources.iconfinder_67_111124;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(661, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 50);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Tìm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnTim.BackColor = System.Drawing.Color.LightGreen;
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTim.Image = global::CNPM.Properties.Resources.iconfinder_67_111124;
+            this.btnTim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTim.Location = new System.Drawing.Point(661, 23);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(100, 50);
+            this.btnTim.TabIndex = 9;
+            this.btnTim.Text = "Tìm";
+            this.btnTim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTim.UseVisualStyleBackColor = false;
             // 
             // frmDichVu
             // 
@@ -306,6 +306,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTimDichVu;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTim;
     }
 }

@@ -50,7 +50,7 @@
             this.txtDienThoai = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTim = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -87,7 +87,7 @@
             this.txtTimNguoiThue.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimNguoiThue.Name = "txtTimNguoiThue";
             this.txtTimNguoiThue.Size = new System.Drawing.Size(180, 30);
-            this.txtTimNguoiThue.TabIndex = 1;
+            this.txtTimNguoiThue.TabIndex = 4;
             this.txtTimNguoiThue.TextChanged += new System.EventHandler(this.TxtTimNguoiThue_TextChanged);
             // 
             // label4
@@ -111,7 +111,7 @@
             this.dgvNguoiThue.RowTemplate.Height = 28;
             this.dgvNguoiThue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNguoiThue.Size = new System.Drawing.Size(781, 199);
-            this.dgvNguoiThue.TabIndex = 4;
+            this.dgvNguoiThue.TabIndex = 0;
             this.dgvNguoiThue.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvNguoiThue_CellContentClick);
             // 
             // label7
@@ -123,7 +123,6 @@
             this.label7.Size = new System.Drawing.Size(143, 25);
             this.label7.TabIndex = 13;
             this.label7.Text = "Mã phòng thuê";
-            this.label7.Click += new System.EventHandler(this.Label7_Click);
             // 
             // label2
             // 
@@ -172,7 +171,7 @@
             this.comboBox1.Location = new System.Drawing.Point(540, 36);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(217, 33);
-            this.comboBox1.TabIndex = 9;
+            this.comboBox1.TabIndex = 4;
             // 
             // txtBatDau
             // 
@@ -180,7 +179,7 @@
             this.txtBatDau.Margin = new System.Windows.Forms.Padding(4);
             this.txtBatDau.Name = "txtBatDau";
             this.txtBatDau.Size = new System.Drawing.Size(133, 30);
-            this.txtBatDau.TabIndex = 16;
+            this.txtBatDau.TabIndex = 7;
             // 
             // label6
             // 
@@ -228,7 +227,7 @@
             this.txtHoKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoKhau.Name = "txtHoKhau";
             this.txtHoKhau.Size = new System.Drawing.Size(236, 30);
-            this.txtHoKhau.TabIndex = 3;
+            this.txtHoKhau.TabIndex = 1;
             // 
             // txtNgaySinh
             // 
@@ -236,7 +235,7 @@
             this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.txtNgaySinh.Name = "txtNgaySinh";
             this.txtNgaySinh.Size = new System.Drawing.Size(236, 30);
-            this.txtNgaySinh.TabIndex = 7;
+            this.txtNgaySinh.TabIndex = 3;
             // 
             // txtCMND
             // 
@@ -244,7 +243,7 @@
             this.txtCMND.Margin = new System.Windows.Forms.Padding(4);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(236, 30);
-            this.txtCMND.TabIndex = 5;
+            this.txtCMND.TabIndex = 2;
             // 
             // txtKetThuc
             // 
@@ -252,7 +251,7 @@
             this.txtKetThuc.Margin = new System.Windows.Forms.Padding(4);
             this.txtKetThuc.Name = "txtKetThuc";
             this.txtKetThuc.Size = new System.Drawing.Size(160, 30);
-            this.txtKetThuc.TabIndex = 18;
+            this.txtKetThuc.TabIndex = 8;
             // 
             // txtMaPhong
             // 
@@ -260,7 +259,7 @@
             this.txtMaPhong.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaPhong.Name = "txtMaPhong";
             this.txtMaPhong.Size = new System.Drawing.Size(217, 30);
-            this.txtMaPhong.TabIndex = 14;
+            this.txtMaPhong.TabIndex = 6;
             // 
             // txtDienThoai
             // 
@@ -268,7 +267,7 @@
             this.txtDienThoai.Margin = new System.Windows.Forms.Padding(4);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(217, 30);
-            this.txtDienThoai.TabIndex = 12;
+            this.txtDienThoai.TabIndex = 5;
             // 
             // txtHoTen
             // 
@@ -276,11 +275,11 @@
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(236, 30);
-            this.txtHoTen.TabIndex = 1;
+            this.txtHoTen.TabIndex = 0;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.btnTim);
             this.groupBox3.Controls.Add(this.btnLuu);
             this.groupBox3.Controls.Add(this.btnXoa);
             this.groupBox3.Controls.Add(this.btnSua);
@@ -296,19 +295,19 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
-            // button1
+            // btnTim
             // 
-            this.button1.BackColor = System.Drawing.Color.LightGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::CNPM.Properties.Resources.iconfinder_67_111124;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(662, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 50);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Tìm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnTim.BackColor = System.Drawing.Color.LightGreen;
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTim.Image = global::CNPM.Properties.Resources.iconfinder_67_111124;
+            this.btnTim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTim.Location = new System.Drawing.Point(662, 27);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(100, 50);
+            this.btnTim.TabIndex = 5;
+            this.btnTim.Text = "Tìm";
+            this.btnTim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTim.UseVisualStyleBackColor = false;
             // 
             // btnLuu
             // 
@@ -319,7 +318,7 @@
             this.btnLuu.Location = new System.Drawing.Point(218, 27);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(100, 50);
-            this.btnLuu.TabIndex = 5;
+            this.btnLuu.TabIndex = 2;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = false;
@@ -334,7 +333,7 @@
             this.btnXoa.Location = new System.Drawing.Point(345, 27);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 50);
-            this.btnXoa.TabIndex = 2;
+            this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -348,7 +347,7 @@
             this.btnSua.Location = new System.Drawing.Point(112, 27);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 50);
-            this.btnSua.TabIndex = 4;
+            this.btnSua.TabIndex = 1;
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.UseVisualStyleBackColor = false;
@@ -363,7 +362,7 @@
             this.btnThem.Location = new System.Drawing.Point(6, 27);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(100, 50);
-            this.btnThem.TabIndex = 2;
+            this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = false;
@@ -432,6 +431,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTim;
     }
 }

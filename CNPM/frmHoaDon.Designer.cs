@@ -52,7 +52,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTim = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -195,7 +195,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btnTim);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.txtTimMaPhong);
@@ -307,19 +307,19 @@
             this.dgvHoaDon.Size = new System.Drawing.Size(783, 206);
             this.dgvHoaDon.TabIndex = 2;
             // 
-            // button1
+            // btnTim
             // 
-            this.button1.BackColor = System.Drawing.Color.LightGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::CNPM.Properties.Resources.iconfinder_67_111124;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(68, 136);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 50);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Tìm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnTim.BackColor = System.Drawing.Color.LightGreen;
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTim.Image = global::CNPM.Properties.Resources.iconfinder_67_111124;
+            this.btnTim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTim.Location = new System.Drawing.Point(68, 136);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(100, 50);
+            this.btnTim.TabIndex = 7;
+            this.btnTim.Text = "Tìm";
+            this.btnTim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTim.UseVisualStyleBackColor = false;
             // 
             // frmHoaDon
             // 
@@ -370,6 +370,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTim;
     }
 }
