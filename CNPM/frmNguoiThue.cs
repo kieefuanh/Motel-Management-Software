@@ -90,6 +90,7 @@ namespace CNPM
             LamTrongTextBox();
             btnLuu.Enabled = true;
             ChoPhepSua();
+            txtCMND.ReadOnly = false;
         }
         private void BtnSua_Click(object sender, EventArgs e)
         {
