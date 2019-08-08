@@ -9,5 +9,18 @@ namespace BAL
 {
     public class PhongTroBAL
     {
+        public bool ThenPT(PhongTro pt)
+        {
+            PhongTroDAL dal = new PhongTroDAL();
+            bool kq = dal.ThemPhongTro(pt);
+            return kq;
+        }
+
+        public List<PhongTro> TaiDSPhongTro()
+        {
+            PhongTroDAL dal = new PhongTroDAL();
+            List<PhongTro> dspt = dal.TaiDSPhongTro();
+            return dspt;
+        }
     }
 }

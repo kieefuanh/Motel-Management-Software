@@ -8,5 +8,10 @@ namespace DTO
 {
     public class PhongTro
     {
+        public string MaPhong { get; set; }
+        public string TinhTrang { get; set; }
+        public  double GiaPhong { get; set; }
+        public string DiaChi { get; set; }
+
     }
 }
