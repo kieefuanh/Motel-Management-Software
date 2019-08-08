@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BAL;
+using DTO;
 namespace CNPM
 {
     public partial class frmDichVu : Form
