@@ -23,21 +23,18 @@ namespace BAL
         {
             return new DichVuDAL().XoaDV(ma);
         }
-        public DichVu LayDV(string ma)
+        public DichVu TimDVTheoMa(string ma)
         {
-            DichVuDAL dal = new DichVuDAL();
-            List<DichVu> dsDV = dal.DSDichVu();
-            foreach (DichVu dv in dsDV)
-            {
-                if (dv.MaDichVu == ma)
-                    return dv;
-            }
-            return null;
+            return new DichVuDAL().TimDVTheoMa(ma);
+        }
+        public DichVu TimDVTheoTen(string ten)
+        {
+            return new DichVuDAL().TimDVTheoTen(ten);
         }
         public bool ThemDV(DichVu dv)
         {
             DichVuDAL dal = new DichVuDAL();
-            if (LayDV(dv.MaDichVu) == null)
+            if (TimDVTheoMa(dv.MaDichVu) == null)
                 return dal.ThemDV(dv);
             else
                 return false;
