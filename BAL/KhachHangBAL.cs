@@ -62,7 +62,7 @@ namespace BAL
         public KhachHang TimTheoTen(string ten)
         {
             KhachHangDAL dal = new KhachHangDAL();
-            KhachHang k = dal.TimTheoTen(k);
+            KhachHang k = dal.TimTheoTen(ten);
             return k;
         }
     }

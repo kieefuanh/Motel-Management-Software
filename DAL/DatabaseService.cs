@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DatabaseService
     {
-        public string connectionString = "SERVER = LAPTOP-PESL1UJR;database = QLPT ; uid = sa; pwd= 11081999";
+        public string connectionString = "SERVER = PEACHIELAP;database = QLPT ; uid = sa; pwd=123456789";
         public SqlConnection connection;
         public SqlCommand command;
         public DatabaseService()
