@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DatabaseService
     {
-        public string connectionString = "SERVER = PEACHIELAP;database = QLPT ; uid = sa; pwd= 123456789";
+        public string connectionString = "SERVER = LAPTOP-PESL1UJR;database = QLPT ; uid = sa; pwd= 11081999";
         public SqlConnection connection;
         public SqlCommand command;
         public DatabaseService()
@@ -59,6 +59,25 @@ namespace DAL
             command.Parameters.AddRange(pars);
             int kq = command.ExecuteNonQuery();
             return kq > 0;
+        }
+        public string ToiUuChuoi(string s)
+        {
+            s = s.ToLower();
+            s = s.Trim();
+            string[] arr = s.Split(new char[] { ' ' },
+                StringSplitOptions.RemoveEmptyEntries);
+            s = "";
+            for (int i = 0; i < arr.Length; i++)
+            {
+                string word = arr[i];
+                word = word.ToLower();
+                char[] arrWord = word.ToCharArray();
+                arrWord[0] = char.ToUpper(arrWord[0]);
+                string newWord = new string(arrWord);
+                s += newWord + " ";
+            }
+            s=s.Trim();
+            return s;
         }
     }
 }

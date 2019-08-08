@@ -107,6 +107,7 @@
             this.dgvNguoiThue.Location = new System.Drawing.Point(14, 297);
             this.dgvNguoiThue.Margin = new System.Windows.Forms.Padding(5);
             this.dgvNguoiThue.Name = "dgvNguoiThue";
+            this.dgvNguoiThue.ReadOnly = true;
             this.dgvNguoiThue.RowHeadersWidth = 62;
             this.dgvNguoiThue.RowTemplate.Height = 28;
             this.dgvNguoiThue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

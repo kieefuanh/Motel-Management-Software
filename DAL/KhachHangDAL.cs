@@ -90,7 +90,8 @@ namespace DAL
                     " HoKhau = @sdt, GioiTinh=@gioitinh where CMND = @cmnd";
 
                 SqlParameter parTen = new SqlParameter("@ten", SqlDbType.NVarChar);
-                parTen.Value = k.TenKH;
+                string ten = ToiUuChuoi(k.TenKH);
+                parTen.Value = ten;
                 SqlParameter parNam = new SqlParameter("@namsinh", SqlDbType.Int);
                 parNam.Value = k.NamSinh;
                 SqlParameter parHoKhau = new SqlParameter("@hokhau", SqlDbType.NVarChar);
@@ -114,7 +115,8 @@ namespace DAL
             {
                 string sql = "insert into KhachHang values(@ten, @namsinh, @cmnd, @hokhau, @sdt, @gioitinh)";
                 SqlParameter parTen = new SqlParameter("@ten", SqlDbType.NVarChar);
-                parTen.Value = k.TenKH;
+                string ten = ToiUuChuoi(k.TenKH);
+                parTen.Value = ten;
                 SqlParameter parNamSinh = new SqlParameter("@namsinh", SqlDbType.Int);
                 parNamSinh.Value = k.NamSinh;
                 SqlParameter parCM = new SqlParameter("@cmnd", SqlDbType.VarChar);
@@ -197,6 +199,33 @@ namespace DAL
             reader.Close();
             return dskh;
         }
+        //Tìm Theo Tên KH
+        public KhachHang TimTheoTen(string ten)
+        {
+            string sql = "select * from KhachHang where TenKH=@ten";
+            KhachHang k = new KhachHang();
+            OpenConnection();
+            SqlParameter parTen = new SqlParameter("@ten", SqlDbType.VarChar);
+            ten = ToiUuChuoi(ten);
+            parTen.Value = ten; ;
+            SqlDataReader reader = ReadDataPars(sql, new[] { parTen });
+            if (reader.Read())
+            {
+                k.TenKH = reader.GetString(0);
+                k.NamSinh = reader.GetInt32(1); ;
+                k.CMND = reader.GetString(2);
+                k.HoKhau = reader.GetString(3);
+                k.SDT = reader.GetString(4);
+                if (reader.GetInt32(5) == 1)
+                {
+                    k.GioiTinh = "Nam";
+                }
+                else
+                    k.GioiTinh = "Nữ";
 
+            }
+            reader.Close();
+            return k;
+        }
     }
 }

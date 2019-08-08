@@ -58,7 +58,12 @@ namespace BAL
             KhachHangDAL dal = new KhachHangDAL();
             List<KhachHang> dskh = dal.TaiKH();
             return dskh;
-
+        }
+        public KhachHang TimTheoTen(string ten)
+        {
+            KhachHangDAL dal = new KhachHangDAL();
+            KhachHang k = dal.TimTheoTen(k);
+            return k;
         }
     }
 }

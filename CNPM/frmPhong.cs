@@ -37,6 +37,25 @@ namespace CNPM
         private void FrmPhong_Load(object sender, EventArgs e)
         {
             TaiDSPhongTro();
+            txtNguoiThue.Enabled = false;
+            txtCMND.Enabled = false;
+            btnLuu.Enabled = false;
+        }
+
+        private void DgvPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaPhong.Text = dgvPhong.SelectedRows[0].Cells[0].Value.ToString();
+            txtGiaPhong.Text = dgvPhong.SelectedRows[0].Cells[2].Value.ToString();
+            txtDiaChi.Text = dgvPhong.SelectedRows[0].Cells[3].Value.ToString();
+            string tinhtrang = txtGiaPhong.Text = dgvPhong.SelectedRows[0].Cells[1].Value.ToString();
+            if (string.Compare(tinhtrang,"Trống",true)==0)
+            {
+                rdbTrong.Checked = true;
+            }
+            else
+            {
+                rdbDaDuocThue.Checked = true;
+            }
         }
 
         private void DgvPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
