@@ -139,7 +139,6 @@ namespace CNPM
             txtDienThoai.ReadOnly = false;
             txtBatDau.ReadOnly = false;
             txtKetThuc.ReadOnly = false;
-            txtCMND.ReadOnly = false;
         }
 
         private void BtnTim_Click(object sender, EventArgs e)

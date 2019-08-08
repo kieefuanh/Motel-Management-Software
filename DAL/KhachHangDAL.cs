@@ -238,7 +238,7 @@ namespace DAL
                 SqlParameter parCM = new SqlParameter("@ten", SqlDbType.NVarChar);
                 parCM.Value = ten;
                 SqlDataReader reader = ReadDataPars(sql, new[] { parCM });
-                if (reader.Read())
+                while (reader.Read())
                 {
                     KhachHang k = new KhachHang();
                     k.TenKH = reader.GetString(0);

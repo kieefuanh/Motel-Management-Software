@@ -40,6 +40,8 @@ namespace CNPM
             txtNguoiThue.Enabled = false;
             txtCMND.Enabled = false;
             btnLuu.Enabled = false;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
         }
 
         private void DgvPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -56,8 +58,29 @@ namespace CNPM
             {
                 rdbDaDuocThue.Checked = true;
             }
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
         }
 
-       
+        private void BtnSua_Click(object sender, EventArgs e)
+        {
+            btnXoa.Enabled = true;
+        }
+
+        private void BtnThem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Xóa các text box
+        private void LamMoiTextBox()
+        {
+            txtMaPhong.Text = "";
+            txtDiaChi.Text = "";
+            txtGiaPhong.Text = "";
+            txtNguoiThue.Text = "";
+            txtCMND.Text = "";
+           
+        }
     }
 }
