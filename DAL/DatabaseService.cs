@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DatabaseService
     {
-        public string connectionString = "SERVER = PEACHIELAP;database = QLPT ; uid = sa; pwd= 123456789";
+        public string connectionString = "SERVER = LAPTOP-PESL1UJR;database = QLPT ; uid = sa; pwd= 11081999";
         public SqlConnection connection;
         public SqlCommand command;
         public DatabaseService()
@@ -59,6 +59,12 @@ namespace DAL
             command.Parameters.AddRange(pars);
             int kq = command.ExecuteNonQuery();
             return kq > 0;
+        }
+        public SqlDataAdapter ShowData(string sql)
+        {
+            OpenConnection();
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+            return adapter;
         }
     }
 }
