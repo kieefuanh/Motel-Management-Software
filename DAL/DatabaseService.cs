@@ -60,11 +60,24 @@ namespace DAL
             int kq = command.ExecuteNonQuery();
             return kq > 0;
         }
-        public SqlDataAdapter ShowData(string sql)
+        public string ToiUuChuoi(string s)
         {
-            OpenConnection();
-            SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
-            return adapter;
+            s = s.ToLower();
+            s = s.Trim();
+            string[] arr = s.Split(new char[] { ' ' },
+                StringSplitOptions.RemoveEmptyEntries);
+            s = "";
+            for (int i = 0; i < arr.Length; i++)
+            {
+                string word = arr[i];
+                word = word.ToLower();
+                char[] arrWord = word.ToCharArray();
+                arrWord[0] = char.ToUpper(arrWord[0]);
+                string newWord = new string(arrWord);
+                s += newWord + " ";
+            }
+            s=s.Trim();
+            return s;
         }
     }
 }
