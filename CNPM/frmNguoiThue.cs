@@ -68,7 +68,7 @@ namespace CNPM
             txtHoTen.Text = "";
             txtKetThuc.Text = "";
             txtMaPhong.Text = "";
-            txtNgaySinh.Text = "00";
+            txtNgaySinh.Text = "";
             txtCMND.Focus();
         }
         private void BtnThem_Click(object sender, EventArgs e)
@@ -84,6 +84,7 @@ namespace CNPM
 
         private void BtnLuu_Click(object sender, EventArgs e)
         {
+
             KhachHang k = new KhachHang();
             k.CMND = txtCMND.Text;
             k.TenKH = txtHoTen.Text;

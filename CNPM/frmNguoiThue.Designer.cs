@@ -96,9 +96,9 @@
             this.label4.Location = new System.Drawing.Point(9, 152);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 25);
+            this.label4.Size = new System.Drawing.Size(94, 25);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Ngày sinh";
+            this.label4.Text = "Năm sinh";
             // 
             // dgvNguoiThue
             // 
