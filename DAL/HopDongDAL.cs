@@ -11,6 +11,32 @@ namespace DAL
 {
     public class HopDongDAL: DatabaseService
     {
+        public List<HopDong> DSHopDong()
+        {
+            SqlDataReader reader = ReadData("select * from HopDong");
+            List<HopDong> dsHD = new List<HopDong>();
+            while (reader.Read())
+            {
+                string mahd = reader.GetString(0);
+                DateTime ngaythue = reader.GetDateTime(1);
+                DateTime ngaytra = reader.GetDateTime(2);
+                string maphong = reader.GetString(3);
+                string chuthich = reader.GetString(4);
+                string cmnd = reader.GetString(5);
+                double coc = reader.GetDouble(6);
+                HopDong hd = new HopDong();
+                hd.MaHopDong = mahd;
+                hd.NgayThue = ngaythue;
+                hd.NgayTra = ngaytra;
+                hd.MaPhong = maphong;
+                hd.ChuThich = chuthich;
+                hd.CMND = cmnd;
+                hd.Coc = coc;
+                dsHD.Add(hd);
+            }
+            reader.Close();
+            return dsHD;
+        }
         public bool ThemHopDong(HopDong hd)
         {
             OpenConnection();

@@ -15,5 +15,10 @@ namespace BAL
             HopDong hd = dal.LayThongTinKH(cm);
             return hd;
         }
+        public List<HopDong> DSHopDong()
+        {
+            HopDongDAL dal = new HopDongDAL();
+            return dal.DSHopDong();
+        }
     }
 }

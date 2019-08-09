@@ -35,7 +35,7 @@ namespace DAL
         public List<DichVu> TimDVTheoTen(string TenDV)
         {
             OpenConnection();
-            SqlDataReader reader = ReadData("select * from DichVu where TenDV = N'"+TenDV+"'");
+            SqlDataReader reader = ReadData("select * from DichVu where TenDV like N'%"+TenDV+"%'");
             //SqlParameter parTen = new SqlParameter("@tendv", SqlDbType.NVarChar);
             //parTen.Value = TenDV;
             List<DichVu> dsDV = new List<DichVu>();
@@ -57,19 +57,27 @@ namespace DAL
         }
         public DichVu TimDVTheoMa(string MaDV)
         {
-            OpenConnection();
-            SqlDataReader reader = ReadData("select * from DichVu where MaDV = @madv ");
-            SqlParameter parMadv = new SqlParameter("@madv", SqlDbType.VarChar);
-            parMadv.Value = MaDV;
-            string tendv = reader.GetString(1);
-            double gia = double.Parse(reader.GetString(2));
-            string dongia = reader.GetString(3);
-            DichVu dv = new DichVu();
-            dv.MaDichVu = MaDV;
-            dv.TenDichVu = tendv;
-            dv.Gia = gia;
-            dv.DonGia = dongia;
-            return dv;
+            SqlDataReader reader = ReadData("select * from DichVu where MaDV = '"+MaDV+"'");
+            //SqlParameter parMadv = new SqlParameter("@madv", SqlDbType.VarChar);
+            //parMadv.Value = MaDV;
+            if (reader.Read())
+            {
+                string madv = reader.GetString(0);
+                string tendv = reader.GetString(1);
+                double gia = reader.GetDouble(2);
+                string dongia = reader.GetString(3);
+                DichVu dv = new DichVu();
+                dv.MaDichVu = madv;
+                dv.TenDichVu = tendv;
+                dv.Gia = gia;
+                dv.DonGia = dongia;
+                reader.Close();
+                return dv;
+            }
+            else
+            {
+                return null;
+            }
         }
         public bool XoaDV(string MaDV)
         {
@@ -96,13 +104,12 @@ namespace DAL
         }
         public bool SuaDV(DichVu dv)
         {
-            OpenConnection();
-            string sql = "update DichVu set MaDV = @madv, TenDV = @tendv, Gia = @gia, DonGia = @dongia";
+            string sql = "update DichVu set TenDV = @tendv, Gia = @gia, DonGia = @dongia where MaDV = @madv";
             SqlParameter parMadv = new SqlParameter("@madv", System.Data.SqlDbType.VarChar);
             parMadv.Value = dv.MaDichVu;
             SqlParameter parTendv = new SqlParameter("@tendv", System.Data.SqlDbType.NVarChar);
             parTendv.Value = dv.TenDichVu;
-            SqlParameter parGia = new SqlParameter("@sl", System.Data.SqlDbType.Float);
+            SqlParameter parGia = new SqlParameter("@gia", System.Data.SqlDbType.Float);
             parGia.Value = dv.Gia;
             SqlParameter parDongia = new SqlParameter("@dongia", System.Data.SqlDbType.NVarChar);
             parDongia.Value = dv.DonGia;

@@ -13,7 +13,7 @@ namespace DTO
         public DateTime NgayTra { get; set; }
         public string MaPhong { get; set; }
         public string CMND { get; set; }
-        public float Coc { get; set; }
+        public double Coc { get; set; }
         public string ChuThich { get; set; }
     }
 }

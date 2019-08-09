@@ -31,7 +31,7 @@ namespace BAL
         {
             return new DichVuDAL().TimDVTheoTen(ten);
         }
-        public bool ThemDV(DichVu dv)
+        public bool ThemDichVu(DichVu dv)
         {
             DichVuDAL dal = new DichVuDAL();
             if (TimDVTheoMa(dv.MaDichVu) == null)

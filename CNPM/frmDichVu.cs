@@ -21,24 +21,21 @@ namespace CNPM
 
         private void BtnThem_Click(object sender, EventArgs e)
         {
-            DichVuBAL bal = new DichVuBAL();
-            DichVu dv = new DichVu();
-            dv.MaDichVu = txtMaDichVu.Text;
-            dv.TenDichVu = txtTenDichVu.Text;
-            dv.Gia = double.Parse(txtGia.Text);
-            dv.DonGia = txtDonVi.Text;
-            bool kq = bal.ThemDV(dv);
-            if (kq)
-            {
-                MessageBox.Show("Thêm thành công !", "Thông báo", MessageBoxButtons.OK);
-            }
-            else
-            {
-                MessageBox.Show("Thêm thất bại !", "Thông báo", MessageBoxButtons.OK);
-            }
-        }
+            btnThem.DialogResult = DialogResult.Yes;
+            btnSua.DialogResult = DialogResult.No;
 
-        private void BtnSua_Click(object sender, EventArgs e)
+            txtMaDichVu.ReadOnly = false;
+            txtTenDichVu.ReadOnly = false;
+            txtGia.ReadOnly = false;
+            txtDonVi.ReadOnly = false;
+
+            txtMaDichVu.Text = "";
+            txtTenDichVu.Text = "";
+            txtGia.Text = "";
+            txtDonVi.Text = "";
+
+        }
+        private void Sua()
         {
             DichVuBAL bal = new DichVuBAL();
             DichVu dv = new DichVu();
@@ -49,12 +46,44 @@ namespace CNPM
             bool kq = bal.SuaDV(dv);
             if (kq)
             {
-                MessageBox.Show("Sửa thành công !", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Cập nhật thành công !", "Thông báo", MessageBoxButtons.OK);
+                LoadData();
             }
             else
             {
-                MessageBox.Show("Sửa thất bại !", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Cập nhật thất bại !", "Thông báo", MessageBoxButtons.OK);
             }
+        }
+        private void Them()
+        {
+            DichVuBAL bal = new DichVuBAL();
+            DichVu dv = new DichVu();
+            dv.MaDichVu = txtMaDichVu.Text;
+            dv.TenDichVu = txtTenDichVu.Text;
+            dv.Gia = double.Parse(txtGia.Text);
+            dv.DonGia = txtDonVi.Text;
+
+            bool kq = bal.ThemDichVu(dv);
+            if (kq)
+            {
+                MessageBox.Show("Thêm thành công !", "Thông báo", MessageBoxButtons.OK);
+                LoadData();
+            }
+            else
+            {
+                MessageBox.Show("Mã dịch vụ đã tồn tại !", "Thông báo", MessageBoxButtons.OK);
+            }
+        }
+        private void BtnSua_Click(object sender, EventArgs e)
+        {
+            btnThem.DialogResult = DialogResult.No;
+            btnSua.DialogResult = DialogResult.Yes;
+
+            txtMaDichVu.ReadOnly = false;
+            txtTenDichVu.ReadOnly = false;
+            txtGia.ReadOnly = false;
+            txtDonVi.ReadOnly = false;
+
         }
         private void BtnXoa_Click(object sender, EventArgs e)
         {
@@ -64,7 +93,7 @@ namespace CNPM
             if (kq)
             {
                 MessageBox.Show("Xoá thành công !", "Thông báo", MessageBoxButtons.OK);
-                dgvDichVu.DataSource = bal.DSDichVu();
+                LoadData();
             }
             else
             {
@@ -88,13 +117,53 @@ namespace CNPM
 
         private void DgvDichVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            txtMaDichVu.Text = dgvDichVu.SelectedRows[0].Cells[0].Value.ToString();
+            txtTenDichVu.Text = dgvDichVu.SelectedRows[0].Cells[1].Value.ToString();
+            txtGia.Text = dgvDichVu.SelectedRows[0].Cells[2].Value.ToString();
+            txtDonVi.Text = dgvDichVu.SelectedRows[0].Cells[3].Value.ToString();
 
+            txtMaDichVu.ReadOnly = true;
+            txtTenDichVu.ReadOnly = true;
+            txtGia.ReadOnly = true;
+            txtDonVi.ReadOnly = true;
         }
 
         private void FrmDichVu_Load(object sender, EventArgs e)
         {
+            LoadData();
+
+            dgvDichVu.Columns[0].HeaderText = "Mã dịch vụ";
+            dgvDichVu.Columns[1].HeaderText = "Tên dịch vụ";
+            dgvDichVu.Columns[2].HeaderText = "Giá";
+            dgvDichVu.Columns[3].HeaderText = "Đơn vị";
+
+            txtMaDichVu.ReadOnly = true;
+            txtTenDichVu.ReadOnly = true;
+            txtGia.ReadOnly = true;
+            txtDonVi.ReadOnly = true;
+
+
+        }
+        private void LoadData()
+        {
             DichVuBAL bal = new DichVuBAL();
             dgvDichVu.DataSource = bal.DSDichVu();
+        }
+        private void BtnLuu_Click(object sender, EventArgs e)
+        {
+            if (txtMaDichVu.Text == "" || txtTenDichVu.Text == "" || txtGia.Text == ""|| txtDonVi.Text == "")
+            {
+                MessageBox.Show("Thông tin còn trống !","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+            else
+            if (btnThem.DialogResult == DialogResult.Yes)
+            {
+                Them();
+            }
+            else
+            {
+                Sua();
+            }
         }
     }
 }

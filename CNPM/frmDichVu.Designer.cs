@@ -63,12 +63,17 @@
             // 
             // dgvDichVu
             // 
+            this.dgvDichVu.AllowUserToAddRows = false;
+            this.dgvDichVu.AllowUserToDeleteRows = false;
+            this.dgvDichVu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDichVu.Location = new System.Drawing.Point(6, 293);
             this.dgvDichVu.Margin = new System.Windows.Forms.Padding(5);
             this.dgvDichVu.Name = "dgvDichVu";
+            this.dgvDichVu.ReadOnly = true;
             this.dgvDichVu.RowHeadersWidth = 62;
             this.dgvDichVu.RowTemplate.Height = 28;
+            this.dgvDichVu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDichVu.Size = new System.Drawing.Size(781, 203);
             this.dgvDichVu.TabIndex = 4;
             this.dgvDichVu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDichVu_CellContentClick);
@@ -210,6 +215,7 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.BtnLuu_Click);
             // 
             // btnXoa
             // 
