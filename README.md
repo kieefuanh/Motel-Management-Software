@@ -22,3 +22,7 @@ Trang thống kê             |  Trang sao lưu
 
 Trang đăng nhập
 ![Trang đăng nhập](assets/report/signin.png)
+
+## Tools
+
+- DevExpress, SQL Server
